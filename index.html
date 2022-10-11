@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon Icon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Music Player</title>
+
+    <!-- FontAwesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="blur-box">
+      <div class="features-card">
+        <div class="dots">
+          <i class="fa-solid close fa-xmark"></i>
+          <i class="fa-solid close fa-circle"></i>
+          <i class="fa-regular fa-circle"></i>
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <div class="features-row">
+          <div class="features">
+            <h1>Key Features</h1>
+            <ul>
+              <li>Audio Visualizer</li>
+              <li>Add or Remove Favorite Song</li>
+              <li>Sync Music Data</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="keys-row">
+            <div class="key-box">
+              <div class="key"><span>space</span></div>
+              <h3>Play & Pause</h3>
+            </div>
+            <div class="key-box">
+              <div class="key"><i class="fa-solid fa-arrow-left"></i></div>
+              <h3>Prev Song</h3>
+            </div>
+            <div class="key-box">
+              <div class="key"><i class="fa-solid fa-arrow-right"></i></div>
+              <h3>Next Song</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="player">
+      <div class="visualizer">
+        <div class="tune">
+          <img src="./assets/images/tune-icon.svg" alt="tune-icon" />
+        </div>
+        <div class="nodes">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+
+      <div class="song-tracker">
+        <div class="progress-area">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="timer">
+          <div class="current">0:00</div>
+          <div class="duration">0:00</div>
+        </div>
+      </div>
+
+      <div class="song-info">
+        <div>
+          <span class="current-song-name">Song Name</span>
+          <i class="fa-heart"></i>
+        </div>
+        <span class="current-song-album">Album</span>
+      </div>
+
+      <div class="controller">
+        <i class="fa-solid prev fa-backward-step"></i>
+        <i class="fa-solid play-pause fa-play"></i>
+        <i class="fa-solid next fa-forward-step"></i>
+      </div>
+    </div>
+
+    <div class="playlist"></div>
+
+    <audio id="audio" class="hidden" src=""></audio>
+
+    <script src="./playlist.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

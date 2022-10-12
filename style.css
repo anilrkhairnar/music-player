@@ -14,6 +14,9 @@
 }
 html {
   background-color: #7b57e4;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
 }
 body {
   margin: 0 auto;
